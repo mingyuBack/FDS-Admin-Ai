@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>FDS Admin Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .btn-login {
+            background-color: #dc3545; /* FDS니까 빨간색 포인트 */
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+        }
+        .btn-login:hover {
+            background-color: #bb2d3b;
+        }
+        .logo-text {
+            color: #dc3545;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <div class="text-center mb-4">
+        <h1 class="h3 logo-text">FDS ADMIN</h1>
+        <p class="text-muted">이상금융거래탐지 시스템 관리자</p>
+    </div>
+
+    <form id="loginForm">
+        <div class="mb-3">
+            <label for="username" class="form-label fw-bold">아이디</label>
+            <input type="text" class="form-control form-control-lg" id="username" placeholder="admin" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label fw-bold">비밀번호</label>
+            <input type="password" class="form-control form-control-lg" id="password" placeholder="1234" required>
+        </div>
+        <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-login text-white">로그인</button>
+        </div>
+    </form>
+    <p class="text-center mt-3 text-muted small">© 2026 FDS Security Team</p>
+</div>
+
+<script>
+    // 간단한 로그인 로직 (여기만 script 태그 씀)
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            // 백엔드 API 호출
+            const response = await fetch('/api/v1/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+                // 로그인 성공 시 '세션 스토리지'에 표식 남기기
+                sessionStorage.setItem('isLoggedIn', 'true');
+                sessionStorage.setItem('adminUser', username);
+
+                alert("환영합니다, 관리자님!");
+                window.location.href = '/index.html'; // 대시보드로 이동
+            } else {
+                alert("❌ 로그인 실패: 아이디나 비밀번호를 확인하세요.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("서버 통신 오류");
+        }
+    });
+</script>
+</body>
+</html>
