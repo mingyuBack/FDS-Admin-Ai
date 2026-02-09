@@ -3,7 +3,7 @@
 본 프로젝트는 AI 기술이 실제 서비스 환경에서 안전하게 운영될 수 있도록 엔지니어링적 고가용성을 확보하는 데 집중했습니다
 서비스 효율성을 위해 마이크로서비스 아키텍처(MSA) 구조로 설계되었습니다.
 
-* **Admin & Analysis Dashboard ([FDS-Admin-Ai 바로가기](https://github.com/mingyuBack/FDS-AI-Server)):** 모델 학습 및 재학습/ 모델 운용
+* **Admin & Analysis Dashboard ([FDS-Admin-Ai 바로가기](https://github.com/mingyuBack/FDS-AI-Server)):** 주요 기능: SMOTE, Isolation Forest 등 다양한 알고리즘을 활용한 모델 고도화 실험 및 MLflow를 활용한 버전 관리
 
 1. 마이크로서비스 아키텍처 (MSA) 지향 
 
