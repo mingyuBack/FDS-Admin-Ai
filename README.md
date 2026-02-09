@@ -33,7 +33,7 @@ Framework: Spring Boot 3.x (Spring Data JPA, Spring Web)
 
 AI/MLOps: Python Flask, MLflow, AWS S3 
 
-Database: H2 (Dev) / MySQL (Prod)
+Database: Oracle
 
 
 Architecture: Layered Architecture / MSA 
