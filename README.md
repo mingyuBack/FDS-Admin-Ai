@@ -3,7 +3,6 @@
 본 프로젝트는 AI 기술이 실제 서비스 환경에서 안전하게 운영될 수 있도록 엔지니어링적 고가용성을 확보하는 데 집중했습니다
 서비스 효율성을 위해 마이크로서비스 아키텍처(MSA) 구조로 설계되었습니다.
 
-* **AI Inference Server (현재 레포):** Flask 기반의 실시간 사기 탐지 API 서버
 * **Admin & Analysis Dashboard ([FDS-Admin-Ai 바로가기](https://github.com/mingyuBack/FDS-AI-Server)):** 모델 학습 및 재학습/ 모델 운용
 
 1. 마이크로서비스 아키텍처 (MSA) 지향 
