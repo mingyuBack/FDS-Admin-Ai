@@ -4,7 +4,7 @@
 서비스 효율성을 위해 마이크로서비스 아키텍처(MSA) 구조로 설계되었습니다.
 
 * **AI Inference Server (현재 레포):** Flask 기반의 실시간 사기 탐지 API 서버
-* **Admin & Analysis Dashboard ([FDS-Admin-Ai 바로가기](https://github.com/mingyuBack/FDS-Admin-Ai)):** 모델 학습 및 재학습/ 모델 운용
+* **Admin & Analysis Dashboard ([FDS-Admin-Ai 바로가기](https://github.com/mingyuBack/FDS-AI-Server)):** 모델 학습 및 재학습/ 모델 운용
 
 1. 마이크로서비스 아키텍처 (MSA) 지향 
 
